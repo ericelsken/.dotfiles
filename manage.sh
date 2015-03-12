@@ -10,7 +10,7 @@ manage_bash() {
 
     #add a source line to ~/.bashrc to source this file if it does not already exist.
     if ! grep -q "source.*$DIR/bashrc" ~/.bashrc; then
-        echo -e "\nsource $DIR/bashrc\n" >> ~/.bashrc
+        echo -e "\nsource \"$DIR/bashrc\"\n" >> ~/.bashrc
     fi
 }
 
