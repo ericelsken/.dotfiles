@@ -8,7 +8,7 @@ DIR="$(cd -P "$(dirname "$(readlink --canonicalize "${BASH_SOURCE[0]}")")" && pw
 PS1="\[\033[1;34m\][\u@\h] \W \$\[\033[00m\] "
 
 export EDITOR="vim"
-export PATH="$PATH:$DIR/bin"
+export PATH="$PATH:$DIR/bin:$HOME/.bin"
 
 #source .sh files in the directories listed in the following array.
 scriptDirPaths=("bash" "self")
