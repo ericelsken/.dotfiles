@@ -6,7 +6,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "Let Vundle manage Vundle, required! Do not add comment at end of Plugin lines.
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 "List Plugins here.
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdtree'
@@ -16,6 +16,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'jonathanfilip/vim-lucius'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'Raimondi/delimitMate'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
