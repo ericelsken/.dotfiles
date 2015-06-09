@@ -17,7 +17,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'jonathanfilip/vim-lucius'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'Raimondi/delimitMate'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
@@ -98,15 +97,18 @@ nnoremap <silent> <Leader>6 :buffer 6<CR>
 nnoremap <silent> <Leader>7 :buffer 7<CR>
 nnoremap <silent> <Leader>8 :buffer 8<CR>
 nnoremap <Leader>= <C-W>=
-inoremap kj <Esc>
 nnoremap ; :
 nnoremap : ;
 nnoremap <silent> <S-H> :bN<CR>
 nnoremap <silent> <S-L> :bn<CR>
 nnoremap <Tab> %
-vnoremap <Tab> %
 nnoremap _ ddp
 nnoremap - ddkP
+
+vnoremap <Tab> %
+
+inoremap kj <Esc>
+
 cnoremap kj <C-C>
 
 augroup EnterFileLineReturn
