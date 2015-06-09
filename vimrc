@@ -36,7 +36,7 @@ set softtabstop=4
 set shiftwidth=4
 set shiftround
 if exists('+colorcolumn')
-	set colorcolumn=80
+	set colorcolumn=80,120
 endif
 set showcmd
 set scrolloff=10
