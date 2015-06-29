@@ -17,6 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'jonathanfilip/vim-lucius'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'digitaltoad/vim-jade'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
