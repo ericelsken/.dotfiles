@@ -53,7 +53,8 @@ set smartcase
 set novisualbell
 set noerrorbells
 set backspace=indent,eol,start
-set listchars=tab:>-
+set listchars=eol:$,tab:+-
+set nolist
 set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.class,*.~
@@ -106,8 +107,6 @@ nnoremap <silent> <S-L> :bn<CR>
 nnoremap <Tab> %
 nnoremap _ ddp
 nnoremap - ddkP
-nnoremap h <Nop>
-nnoremap l <Nop>
 
 vnoremap <Tab> %
 
