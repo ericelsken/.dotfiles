@@ -107,12 +107,18 @@ nnoremap <silent> <S-L> :bn<CR>
 nnoremap <Tab> %
 nnoremap _ ddp
 nnoremap - ddkP
+nnoremap <Backspace> <Nop>
 
 vnoremap <Tab> %
 
 inoremap kj <Esc>
 
 cnoremap kj <C-C>
+
+map <Up> <Nop>
+map <Down> <Nop>
+map <Left> <Nop>
+map <Right> <Nop>
 
 augroup EnterFileLineReturn
     autocmd!
