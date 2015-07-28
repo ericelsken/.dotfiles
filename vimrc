@@ -18,6 +18,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'jonathanfilip/vim-lucius'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'kien/ctrlp.vim'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
@@ -28,6 +29,7 @@ filetype plugin indent on
 "Config.
 set hidden
 set number
+set relativenumber
 set nowrap
 set autoindent
 set smartindent
@@ -37,7 +39,7 @@ set softtabstop=4
 set shiftwidth=4
 set shiftround
 if exists('+colorcolumn')
-	set colorcolumn=80,120
+    set colorcolumn=80,120
 endif
 set showcmd
 set scrolloff=10
@@ -51,8 +53,7 @@ set smartcase
 set novisualbell
 set noerrorbells
 set backspace=indent,eol,start
-set listchars=eol:$,tab:>-
-set nolist
+set listchars=tab:>-
 set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.class,*.~
@@ -105,6 +106,8 @@ nnoremap <silent> <S-L> :bn<CR>
 nnoremap <Tab> %
 nnoremap _ ddp
 nnoremap - ddkP
+nnoremap h <Nop>
+nnoremap l <Nop>
 
 vnoremap <Tab> %
 
