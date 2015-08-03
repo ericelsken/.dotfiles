@@ -19,6 +19,7 @@ Plugin 'jonathanfilip/vim-lucius'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'kien/ctrlp.vim'
+Plugin 'unblevable/quick-scope'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
