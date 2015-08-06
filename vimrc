@@ -77,7 +77,7 @@ set laststatus=2
 let mapleader = " "
 let maplocalleader = ","
 nnoremap <silent> <Leader>/ :nohlsearch<CR> :let @/=""<CR><Left>
-nnoremap <Leader>c :w<Bar>bp<Bar>sp<Bar>bn<Bar>bd<CR>
+nnoremap <Leader>C :w<Bar>bp<Bar>sp<Bar>bn<Bar>bd<CR>
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 nnoremap <Leader>ev :split $MYVIMRC<CR>
@@ -91,6 +91,7 @@ nnoremap <Leader>h <C-W>h
 nnoremap <Leader>l <C-W>l
 nnoremap <Leader>p :set paste!<CR>:set paste?<CR>
 nnoremap <Leader>R *:%s///c<Left><Left>
+nnoremap <Leader>c "+yy
 nnoremap <silent> <Leader><Tab> :b#<CR>
 nnoremap <silent> <Leader>1 :buffer 1<CR>
 nnoremap <silent> <Leader>2 :buffer 2<CR>
@@ -111,6 +112,7 @@ nnoremap - ddkP
 nnoremap <Backspace> <Nop>
 
 vnoremap <Tab> %
+vnoremap <Leader>c "+y
 
 inoremap kj <Esc>
 
