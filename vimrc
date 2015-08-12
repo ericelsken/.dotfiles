@@ -20,6 +20,10 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'kien/ctrlp.vim'
 Plugin 'unblevable/quick-scope'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
