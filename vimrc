@@ -15,6 +15,7 @@ Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-markdown'
 Plugin 'jonathanfilip/vim-lucius'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'digitaltoad/vim-jade'
@@ -35,6 +36,7 @@ filetype plugin indent on
 set hidden
 set number
 set relativenumber
+set textwidth=80
 set nowrap
 set autoindent
 set smartindent
@@ -48,17 +50,16 @@ if exists('+colorcolumn')
 endif
 set showcmd
 set scrolloff=10
-set sidescrolloff=10
+set sidescrolloff=20
 set cursorline
 set noshowmatch
 set incsearch
 set hlsearch
-set gdefault
 set smartcase
 set novisualbell
 set noerrorbells
 set backspace=indent,eol,start
-set listchars=eol:$,tab:+-
+set listchars=eol:$,tab:\|-
 set nolist
 set history=1000
 set undolevels=1000
@@ -81,7 +82,7 @@ set laststatus=2
 let mapleader = " "
 let maplocalleader = ","
 nnoremap <silent> <Leader>/ :nohlsearch<CR> :let @/=""<CR><Left>
-nnoremap <Leader>C :w<Bar>bp<Bar>sp<Bar>bn<Bar>bd<CR>
+nnoremap <Leader>c :w<Bar>bp<Bar>sp<Bar>bn<Bar>bd<CR>
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 nnoremap <Leader>ev :split $MYVIMRC<CR>
@@ -95,7 +96,6 @@ nnoremap <Leader>h <C-W>h
 nnoremap <Leader>l <C-W>l
 nnoremap <Leader>p :set paste!<CR>:set paste?<CR>
 nnoremap <Leader>R *:%s///c<Left><Left>
-nnoremap <Leader>c "+yy
 nnoremap <silent> <Leader><Tab> :b#<CR>
 nnoremap <silent> <Leader>1 :buffer 1<CR>
 nnoremap <silent> <Leader>2 :buffer 2<CR>
@@ -116,7 +116,6 @@ nnoremap - ddkP
 nnoremap <Backspace> <Nop>
 
 vnoremap <Tab> %
-vnoremap <Leader>c "+y
 
 inoremap kj <Esc>
 
@@ -131,7 +130,7 @@ augroup EnterFileLineReturn
     autocmd!
     autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
-        \     execute 'normal! g`"zvzz' |
+        \     execute "normal! g'\"zvzz" |
         \ endif
 augroup END
 
