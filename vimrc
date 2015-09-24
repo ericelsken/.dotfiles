@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 "List Plugins here.
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-fugitive'
@@ -21,10 +22,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'kien/ctrlp.vim'
 Plugin 'unblevable/quick-scope'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
@@ -36,7 +33,6 @@ filetype plugin indent on
 set hidden
 set number
 set relativenumber
-set textwidth=80
 set nowrap
 set autoindent
 set smartindent
@@ -95,7 +91,7 @@ nnoremap <Leader>k <C-W>k
 nnoremap <Leader>h <C-W>h
 nnoremap <Leader>l <C-W>l
 nnoremap <Leader>p :set paste!<CR>:set paste?<CR>
-nnoremap <Leader>R *:%s///c<Left><Left>
+nnoremap <Leader>R *:%s///gc<Left><Left>
 nnoremap <silent> <Leader><Tab> :b#<CR>
 nnoremap <silent> <Leader>1 :buffer 1<CR>
 nnoremap <silent> <Leader>2 :buffer 2<CR>
