@@ -92,7 +92,7 @@ nnoremap <Leader>k <C-W>k
 nnoremap <Leader>h <C-W>h
 nnoremap <Leader>l <C-W>l
 nnoremap <Leader>p :set paste!<CR>:set paste?<CR>
-nnoremap <Leader>R *:%s///gc<Left><Left>
+nnoremap <Leader>R *:%s///gc<Left><Left><Left>
 nnoremap <Leader>d <C-d>
 nnoremap <Leader>u <C-u>
 nnoremap <silent> <Leader><Tab> :b#<CR>
