@@ -5,6 +5,7 @@ let g:ycm_filetype_specific_completion_to_disable = {
     \ 'gitcomplete': 1,
     \ 'csv': 1,
     \ 'text': 1,
-    \ 'yaml': 1
+    \ 'yaml': 1,
+    \ 'jsx': 1
     \}
 
