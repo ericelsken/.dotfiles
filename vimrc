@@ -67,19 +67,19 @@ set splitbelow
 set splitright
 
 "Status line config.
-set statusline=\ \ 
+set statusline="\ \ "
 set statusline+=%f
 set statusline+=\ %m
 set statusline+=%=
-set statusline+=%l\/%L\ 
-set statusline+=\ \ 
+set statusline+="%l\/%L\ "
+set statusline+="\ \ "
 set laststatus=2
 
 "Mappings.
 let mapleader = " "
 let maplocalleader = ","
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
-nnoremap <Leader>c :w<Bar>bp<Bar>sp<Bar>bn<Bar>bd<CR>
+nnoremap <Leader>c "+yy
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 nnoremap <Leader>ev :split $MYVIMRC<CR>
@@ -117,6 +117,7 @@ nnoremap <Backspace> <Nop>
 vnoremap <Tab> %
 vnoremap ; :
 vnoremap : ;
+vnoremap <Leader>c "+y
 
 inoremap kj <Esc>
 
@@ -174,8 +175,8 @@ endfunction
 
 "Color scheme.
 if has("gui-running")
-	set background=light
+    set background=light
 else
-	set background=dark
+    set background=dark
 endif
 silent! colorscheme lucius
