@@ -80,6 +80,7 @@ let mapleader = " "
 let maplocalleader = ","
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 nnoremap <Leader>c "+yy
+nnoremap <silent> <Leader><BS> :w<Bar>bp<Bar>sp<Bar>bn<Bar>bd<CR>
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 nnoremap <Leader>ev :split $MYVIMRC<CR>
