@@ -114,6 +114,7 @@ nnoremap <Tab> %
 nnoremap _ ddp
 nnoremap - ddkP
 nnoremap <Backspace> <Nop>
+nnoremap <Leader>bb :buffers<CR>:buffer<Space>
 
 vnoremap <Tab> %
 vnoremap ; :
