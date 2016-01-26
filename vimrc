@@ -11,6 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'wakatime/vim-wakatime'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-fugitive'
@@ -56,7 +57,7 @@ set smartcase
 set novisualbell
 set noerrorbells
 set backspace=indent,eol,start
-set listchars=eol:$,tab:\|-
+set listchars=eol:¬,tab:\|-,trail:-
 set nolist
 set history=1000
 set undolevels=1000
