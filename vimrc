@@ -66,6 +66,7 @@ set lazyredraw
 set ttyfast
 set splitbelow
 set splitright
+set title
 
 "Status line config.
 set statusline="\ \ "
