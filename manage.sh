@@ -32,9 +32,13 @@ manage_vim() {
     vim +PluginInstall! +qall
 }
 
+manage_terminator() {
+    bash ./terminator/manage.sh
+}
+
 args="$@"
 if [ "$#" -eq 0 ]; then
-    args=( bash vim )
+    args=( bash vim terminator )
 fi
 for arg in ${args[@]}; do
     case "$arg" in
@@ -42,5 +46,7 @@ for arg in ${args[@]}; do
             manage_bash;;
         vim)
             manage_vim;;
+        terminator)
+            manage_terminator;;
     esac
 done
