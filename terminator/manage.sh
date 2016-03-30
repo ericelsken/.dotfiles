@@ -9,5 +9,4 @@ mkdir -p "$TERMINATOR_CONFIG_DIR"
 
 if [ ! -h "$TERMINATOR_CONFIG" ]; then
     ln -fs "$DIR/config" "$TERMINATOR_CONFIG_DIR"
-else
 fi

@@ -1,22 +1,25 @@
 [global_config]
-    focus = sloppy
-    title_transmit_bg_color = 'green'
-
+  title_transmit_bg_color = green
+[keybindings]
+  go_left = <Alt>h
+  go_down = <Alt>j
+  go_right = <Alt>l
+  go_up = <Alt>k
 [profiles]
-    [[default]]
-        use_system_font = False
-        font = 'Monospace 10'
-        use_theme_colors = False
-        color_scheme = 'white_on_black'
-        background_color = 'black'
-        foreground_color = 'white'
-
+  [[default]]
+    use_system_font = False
+    background_image = None
+    foreground_color = "#ffffff"
+    scroll_on_output = False
+    color_scheme = white_on_black
+    font = Monospace 10
 [layouts]
-    [[default]]
-        [[[child1]]]
-            type = Terminal
-            parent = window0
-            profile = default
-        [[[window0]]]
-            type = Window
-            size = 900, 600
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      size = 900, 600
+[plugins]

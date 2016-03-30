@@ -36,9 +36,13 @@ manage_terminator() {
     bash ./terminator/manage.sh
 }
 
+manage_ag() {
+    bash ./ag/manage.sh
+}
+
 args="$@"
 if [ "$#" -eq 0 ]; then
-    args=( bash vim terminator )
+    args=( bash vim terminator ag )
 fi
 for arg in ${args[@]}; do
     case "$arg" in
@@ -48,5 +52,7 @@ for arg in ${args[@]}; do
             manage_vim;;
         terminator)
             manage_terminator;;
+        ag)
+            manage_ag;;
     esac
 done
