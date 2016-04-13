@@ -7,12 +7,14 @@
   go_up = <Alt>k
 [profiles]
   [[default]]
-    use_system_font = False
     background_image = None
+    scrollback_lines = 1000
+    use_system_font = False
     foreground_color = "#ffffff"
     scroll_on_output = False
     color_scheme = white_on_black
     font = Monospace 10
+    scrollback_infinite = True
 [layouts]
   [[default]]
     [[[child1]]]

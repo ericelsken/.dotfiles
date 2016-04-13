@@ -24,6 +24,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'kien/ctrlp.vim'
 Plugin 'unblevable/quick-scope'
 Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'evidens/vim-twig'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
