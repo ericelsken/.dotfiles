@@ -17,11 +17,14 @@
     scrollback_infinite = True
 [layouts]
   [[default]]
-    [[[child1]]]
-      type = Terminal
-      parent = window0
-      profile = default
-    [[[window0]]]
+    [[[child0]]]
       type = Window
-      size = 900, 600
+      order = 0
+      parent = ""
+      size = 904, 538
+    [[[terminal1]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child0
 [plugins]
