@@ -1,5 +1,6 @@
 [global_config]
   title_transmit_bg_color = green
+  suppress_multiple_term_dialog = True
 [keybindings]
   go_left = <Alt>h
   go_down = <Alt>j

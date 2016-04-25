@@ -123,6 +123,8 @@ vnoremap <Tab> %
 vnoremap ; :
 vnoremap : ;
 vnoremap <Leader>c "+y
+vnoremap y myy`y
+vnoremap Y myY`y
 
 inoremap kj <Esc>
 
