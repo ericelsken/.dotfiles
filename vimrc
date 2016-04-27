@@ -95,6 +95,7 @@ nnoremap <Leader>ev :split $MYVIMRC<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 nnoremap <Leader>x :wqa<CR>
 nnoremap <Leader>w :wa<CR>
+nnoremap <Leader>c :wq<CR>
 nnoremap <Leader>j <C-W>j
 nnoremap <Leader>k <C-W>k
 nnoremap <Leader>h <C-W>h
