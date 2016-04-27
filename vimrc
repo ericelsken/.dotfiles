@@ -18,6 +18,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-commentary'
 Plugin 'jonathanfilip/vim-lucius'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'digitaltoad/vim-jade'
@@ -25,6 +26,11 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'unblevable/quick-scope'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'evidens/vim-twig'
+Plugin 'christoomey/vim-sort-motion'
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-indent'
+Plugin 'kana/vim-textobj-entire'
+Plugin 'kana/vim-textobj-line'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
@@ -82,13 +88,11 @@ set laststatus=2
 let mapleader = " "
 let maplocalleader = ","
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
-nnoremap <Leader>c "+yy
 nnoremap <silent> <Leader><BS> :w<Bar>bp<Bar>sp<Bar>bn<Bar>bd<CR>
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 nnoremap <Leader>ev :split $MYVIMRC<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
-nnoremap <Leader>mks :mksession!<CR>
 nnoremap <Leader>x :wqa<CR>
 nnoremap <Leader>w :wa<CR>
 nnoremap <Leader>j <C-W>j
@@ -109,6 +113,9 @@ nnoremap <silent> <Leader>6 :buffer 6<CR>
 nnoremap <silent> <Leader>7 :buffer 7<CR>
 nnoremap <silent> <Leader>8 :buffer 8<CR>
 nnoremap <Leader>= <C-W>=
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gc :Gcommit -a<CR>
+
 nnoremap ; :
 nnoremap : ;
 nnoremap <silent> <S-H> :bN<CR>
