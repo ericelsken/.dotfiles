@@ -31,6 +31,8 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-indent'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'kana/vim-textobj-line'
+Plugin 'vim-scripts/camelcasemotion'
+Plugin 'vim-scripts/argtextobj.vim'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
@@ -133,6 +135,8 @@ vnoremap : ;
 vnoremap <Leader>c "+y
 vnoremap y myy`y
 vnoremap Y myY`y
+vnoremap > mi>`i
+vnoremap < mi<`i
 
 inoremap kj <Esc>
 
