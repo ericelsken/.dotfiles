@@ -1,6 +1,10 @@
 let g:NERDTreeShowHidden = 1
 
 function s:NERDTreeConfig()
+    NERDTree
+    if EEBufferCount() !=# 0
+        wincmd p
+    endif
     nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
 endfunction
 

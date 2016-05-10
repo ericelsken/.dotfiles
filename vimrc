@@ -32,13 +32,20 @@ Plugin 'kana/vim-textobj-indent'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'kana/vim-textobj-line'
 Plugin 'vim-scripts/camelcasemotion'
-Plugin 'vim-scripts/argtextobj.vim'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
 syntax on
 filetype on
 filetype plugin indent on
+
+"Color scheme.
+if has("gui-running")
+    set background=light
+else
+    set background=dark
+endif
+silent! colorscheme lucius
 
 "Config.
 set hidden
@@ -60,6 +67,7 @@ set scrolloff=10
 set sidescrolloff=20
 set cursorline
 set noshowmatch
+highlight MatchParen cterm=none ctermbg=white ctermfg=black
 set incsearch
 set hlsearch
 set smartcase
@@ -191,11 +199,3 @@ endif
 function! EEBufferCount()
     return len(filter(range(1, bufnr("$")), 'buflisted(v:val)'))
 endfunction
-
-"Color scheme.
-if has("gui-running")
-    set background=light
-else
-    set background=dark
-endif
-silent! colorscheme lucius
