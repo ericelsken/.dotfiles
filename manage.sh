@@ -40,6 +40,10 @@ manage_ag() {
     bash ./ag/manage.sh
 }
 
+manage_compton() {
+    bash ./compton/manage.sh
+}
+
 args="$@"
 if [ "$#" -eq 0 ]; then
     args=( bash vim terminator ag )
@@ -54,5 +58,9 @@ for arg in ${args[@]}; do
             manage_terminator;;
         ag)
             manage_ag;;
+        i3)
+            manage_i3;;
+        compton)
+            manage_compton;;
     esac
 done
