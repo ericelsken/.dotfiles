@@ -40,6 +40,10 @@ manage_ag() {
     bash ./ag/manage.sh
 }
 
+manage_i3() {
+    bash ./i3/manage.sh
+}
+
 manage_compton() {
     bash ./compton/manage.sh
 }

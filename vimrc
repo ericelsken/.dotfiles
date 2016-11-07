@@ -32,6 +32,7 @@ Plugin 'kana/vim-textobj-indent'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'kana/vim-textobj-line'
 Plugin 'vim-scripts/camelcasemotion'
+Plugin 'tpope/vim-abolish'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
@@ -84,6 +85,7 @@ set ttyfast
 set splitbelow
 set splitright
 set title
+set backupcopy=yes
 
 "Status line config.
 set statusline="\ \ "
