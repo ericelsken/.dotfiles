@@ -145,8 +145,6 @@ vnoremap : ;
 vnoremap <Leader>c "+y
 vnoremap y myy`y
 vnoremap Y myY`y
-vnoremap > mi>`i
-vnoremap < mi<`i
 
 inoremap kj <Esc>
 
