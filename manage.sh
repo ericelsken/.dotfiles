@@ -48,6 +48,10 @@ manage_compton() {
     bash ./compton/manage.sh
 }
 
+manage_git() {
+    bash ./git/manage.sh
+}
+
 args="$@"
 if [ "$#" -eq 0 ]; then
     args=( bash vim terminator ag )
@@ -66,5 +70,7 @@ for arg in ${args[@]}; do
             manage_i3;;
         compton)
             manage_compton;;
+        git)
+            manage_git;;
     esac
 done
