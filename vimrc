@@ -119,15 +119,10 @@ nnoremap <silent> <Leader>p :set paste!<CR>
 nnoremap <Leader>R *:%s///gc<Left><Left><Left>
 nnoremap <Leader>d <C-d>
 nnoremap <Leader>u <C-u>
+nnoremap <Leader>0 zO
+nnoremap <Leader>9 zC
+nnoremap <Leader>z zA
 nnoremap <silent> <Leader><Tab> :b#<CR>
-nnoremap <silent> <Leader>1 :buffer 1<CR>
-nnoremap <silent> <Leader>2 :buffer 2<CR>
-nnoremap <silent> <Leader>3 :buffer 3<CR>
-nnoremap <silent> <Leader>4 :buffer 4<CR>
-nnoremap <silent> <Leader>5 :buffer 5<CR>
-nnoremap <silent> <Leader>6 :buffer 6<CR>
-nnoremap <silent> <Leader>7 :buffer 7<CR>
-nnoremap <silent> <Leader>8 :buffer 8<CR>
 nnoremap <Leader>= <C-W>=
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gc :Gcommit<CR>
@@ -148,6 +143,9 @@ vnoremap : ;
 vnoremap <Leader>c "+y
 vnoremap y myy`y
 vnoremap Y myY`y
+vnoremap <Leader>0 zO
+vnoremap <Leader>9 zC
+vnoremap <Leader>z zA
 
 inoremap kj <Esc>
 
