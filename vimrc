@@ -86,6 +86,9 @@ set splitbelow
 set splitright
 set title
 set backupcopy=yes
+set foldmethod=syntax
+set foldcolumn=4
+set foldlevelstart=0
 
 "Status line config.
 set statusline="\ \ "
@@ -127,7 +130,7 @@ nnoremap <silent> <Leader>7 :buffer 7<CR>
 nnoremap <silent> <Leader>8 :buffer 8<CR>
 nnoremap <Leader>= <C-W>=
 nnoremap <Leader>gs :Gstatus<CR>
-nnoremap <Leader>gc :Gcommit -a<CR>
+nnoremap <Leader>gc :Gcommit<CR>
 
 nnoremap ; :
 nnoremap : ;

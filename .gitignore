@@ -1,2 +1,4 @@
 #ignore self directory. scripts here are host specific.
 self/
+
+bin/
