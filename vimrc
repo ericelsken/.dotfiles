@@ -76,7 +76,7 @@ set novisualbell
 set noerrorbells
 set backspace=indent,eol,start
 set listchars=eol:¬,tab:\|-,trail:-
-set nolist
+" set nolist
 set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.class,*.~
@@ -160,6 +160,7 @@ map <Right> <Nop>
 
 augroup EnterFileLineReturn
     autocmd!
+    autocmd BufReadPost * :echom 'file line return'
     autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \     execute "normal! g'\"zvzz" |
