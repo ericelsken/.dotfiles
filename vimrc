@@ -160,7 +160,6 @@ map <Right> <Nop>
 
 augroup EnterFileLineReturn
     autocmd!
-    autocmd BufReadPost * :echom 'file line return'
     autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \     execute "normal! g'\"zvzz" |
