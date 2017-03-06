@@ -86,9 +86,9 @@ set splitbelow
 set splitright
 set title
 set backupcopy=yes
-set foldmethod=syntax
-set foldcolumn=4
-set foldlevelstart=0
+"set foldmethod=syntax
+"set foldcolumn=4
+"set foldlevelstart=0
 
 "Status line config.
 set statusline="\ \ "
