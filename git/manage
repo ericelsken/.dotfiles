@@ -10,4 +10,6 @@ git config --global user.name "Eric Elsken"
 
 git config --global alias.s "status"
 
+git config --global push.default simple
+
 git config --global commit.template "$DIR/gitmessage"
