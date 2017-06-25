@@ -1,7 +1,8 @@
-
 #!/bin/bash
 
 DIR="$(cd -P "$(dirname "$(readlink --canonicalize "${BASH_SOURCE[0]}")")" && pwd)"
+
+sudo apt install -y compton
 
 COMPTON_CONFIG_DIR="$HOME/.config"
 COMPTON_CONFIG="$COMPTON_CONFIG_DIR/compton.conf"
