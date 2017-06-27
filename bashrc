@@ -15,7 +15,7 @@ scriptDirPaths=("bash" "self")
 for dirName in ${scriptDirPaths[@]}; do
     if [ -d "$DIR/$dirName" ]; then
         #because DIR is absolute, filePath will be absolute, thus the source line.
-        for filePath in $(find "$DIR/$dirName" -type f -executable); do
+        for filePath in $(find "$DIR/$dirName" -name "*.sh"); do
             source "$filePath"
         done
     fi
