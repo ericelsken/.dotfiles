@@ -9,5 +9,3 @@ alias .="pwd"
 alias q="exit"
 alias e="$EDITOR"
 alias d="docker"
-
-echo "alias.sh"
