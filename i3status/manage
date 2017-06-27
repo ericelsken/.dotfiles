@@ -2,6 +2,8 @@
 
 DIR="$(cd -P "$(dirname "$(readlink --canonicalize "${BASH_SOURCE[0]}")")" && pwd)"
 
+sudo apt install -y i3status
+
 I3_STATUS_CONFIG_DIR="$HOME/.config/i3status/"
 I3_STATUS_CONFIG="$I3_STATUS_CONFIG_DIR/config"
 

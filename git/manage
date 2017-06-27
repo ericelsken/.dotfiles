@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#the following should be the first content line of the script.
+DIR="$(cd -P "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
+
+sudo apt install -y git
+
+git config --global user.email "eric.elsken@gmail.com"
+git config --global user.name "Eric Elsken"
+
+git config --global alias.s "status"
+
+git config --global push.default simple
+
+git config --global commit.template "$DIR/gitmessage"

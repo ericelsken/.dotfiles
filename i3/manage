@@ -2,6 +2,8 @@
 
 DIR="$(cd -P "$(dirname "$(readlink --canonicalize "${BASH_SOURCE[0]}")")" && pwd)"
 
+sudo apt install -y i3
+
 I3_CONFIG_DIR="$HOME/.config/i3/"
 I3_CONFIG="$I3_CONFIG_DIR/config"
 

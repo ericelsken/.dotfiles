@@ -5,7 +5,7 @@ DIR="$(cd -P "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
 
 manage_bash() {
     if [ ! -d "$DIR/self" ]; then
-        mkdir "$DIR/self" && echo "Made the self directory for you. Put .sh files here."
+        mkdir "$DIR/self" && echo "Made the self directory for you. Put executable files here."
     fi
 
     #add a source line to ~/.bashrc to source this file if it does not already exist.
@@ -32,45 +32,20 @@ manage_vim() {
     vim +PluginInstall! +qall
 }
 
-manage_terminator() {
-    bash ./terminator/manage.sh
-}
+manage() {
+    function_name="manage_$1"
 
-manage_ag() {
-    bash ./ag/manage.sh
-}
-
-manage_i3() {
-    bash ./i3/manage.sh
-}
-
-manage_compton() {
-    bash ./compton/manage.sh
-}
-
-manage_git() {
-    bash ./git/manage.sh
+    if [ -n "$(type -t $function_name)" ] && [ "$(type -t $function_name)" = "function" ]; then
+        "$function_name" "$@"
+    else
+        "./$1/manage" "$@"
+    fi
 }
 
 args="$@"
 if [ "$#" -eq 0 ]; then
-    args=( bash vim terminator ag )
+    args=( ag bash compton git i3 i3status terminator vim )
 fi
 for arg in ${args[@]}; do
-    case "$arg" in
-        bash)
-            manage_bash;;
-        vim)
-            manage_vim;;
-        terminator)
-            manage_terminator;;
-        ag)
-            manage_ag;;
-        i3)
-            manage_i3;;
-        compton)
-            manage_compton;;
-        git)
-            manage_git;;
-    esac
+    manage "$arg"
 done
