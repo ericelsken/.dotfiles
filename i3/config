@@ -12,7 +12,8 @@
 set $mod Mod4
 
 exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g = "i3bar"' --config ~/.config/compton.conf -b
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id pasystray
+exec ~/.xsession
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -39,8 +40,18 @@ bindsym $mod+x kill
 bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
+# installe
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#
+
+bindsym Ctrl+Mod1+Tab exec sh /home/ericelsken/.screenlayout/work.sh
+bindsym Ctrl+Mod1+backslash exec sh /home/ericelsken/.screenlayout/work-single.sh
+
+bindsym $mod+b exec google-chrome-stable
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +4%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -4%
+bindsym XF86AudioMute exec ~/.dotfiles/bin/mute-toggle
 
 # change focus
 bindsym $mod+h focus left
@@ -116,12 +127,21 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# reload the configuration file bindsym $mod+Shift+c reload # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# create log out, reboot, and poweroff bindings
+mode "Exit (L)ogout, (R)eboot, (P)oweroff" {
+    bindsym $mod+l exit
+    bindsym $mod+r exec systemctl reboot
+    bindsym $mod+p exec systemctl poweroff
+
+    # back to normal
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+
+bindsym $mod+Shift+e mode "Exit (L)ogout, (R)eboot, (P)oweroff"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -147,20 +167,15 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+assign [class="google-chrome"] 3
+
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 bindsym $mod+r mode "resize"
 
-for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
-for_window [class="Software Updater"] floating enable; border none; focus mode_toggle
-for_window [class="Wine"] floating enable
-for_window [class="1Password"] floating enable
-for_window [class="Whisker Menu"] floating enable
-for_window [class="Wine System Tray"] move scratchpad
-
 # lock screen
-bindsym $mod+Alt+l exec --no-startup-id i3lock -c 000000
+bindsym Ctrl+Mod1+Delete exec --no-startup-id i3lock -c 000000
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
