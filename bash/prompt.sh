@@ -3,6 +3,8 @@
 git_dirty () {
     if [[ "$(git status 2> /dev/null | tail -n 1)" != "nothing to commit"* ]]; then
         echo "*"
+    else
+        echo " "
     fi
 }
 
