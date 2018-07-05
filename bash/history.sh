@@ -1,5 +1,6 @@
 #!/bin/bash
 
-HISTSIZE=1000
-HISTFILESIZE=5000
-HISTCONTROL=ignorespace:ignoredups
+export HISTSIZE=1000
+export HISTFILESIZE=5000
+export HISTCONTROL=ignorespace:ignoredups
+export HISTIGNORE="ls:ls -la:l:la:cd:cd -:exit:clear:q"

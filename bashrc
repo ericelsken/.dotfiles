@@ -5,8 +5,6 @@
 #it is not required, but highly recommneded to have all remaining aspects of this script be relative to DIR.
 DIR="$(cd -P "$(dirname "$(readlink --canonicalize "${BASH_SOURCE[0]}")")" && pwd)"
 
-PS1="\[\033[1;34m\][\u@\h] \W \$\[\033[00m\] "
-
 export EDITOR="vim"
 export PATH="$PATH:$DIR/bin:$HOME/.bin"
 
