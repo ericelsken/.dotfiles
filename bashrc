@@ -5,9 +5,6 @@
 #it is not required, but highly recommneded to have all remaining aspects of this script be relative to DIR.
 DIR="$(cd -P "$(dirname "$(readlink --canonicalize "${BASH_SOURCE[0]}")")" && pwd)"
 
-export EDITOR="vim"
-export PATH="$PATH:$DIR/bin:$HOME/.bin"
-
 #source .sh files in the directories listed in the following array.
 scriptDirPaths=("bash" "self")
 for dirName in ${scriptDirPaths[@]}; do

@@ -32,6 +32,7 @@ Plugin 'kana/vim-textobj-entire'
 Plugin 'kana/vim-textobj-line'
 Plugin 'vim-scripts/camelcasemotion'
 Plugin 'tpope/vim-abolish'
+Plugin 'hashivim/vim-terraform'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
@@ -54,7 +55,7 @@ set relativenumber
 set nowrap
 set autoindent
 set smartindent
-set expandtab
+" set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
