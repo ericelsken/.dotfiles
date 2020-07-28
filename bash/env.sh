@@ -1,4 +1,4 @@
 #!/bin/bash
 
-export EDITOR="vimx"
+export EDITOR="vim"
 export PATH="$PATH:$DIR/bin:$HOME/.bin"
