@@ -1,8 +1,6 @@
 #!/bin/bash
 
 RESET="\[\033[0m\]"
-GREEN="\[\033[32m\]"
-BOLD_YELLOW="\[\033[1;33m\]"
 BOLD_BLUE="\[\033[1;34m\]"
 BOLD_MAGENTA="\[\033[1;35m\]"
 BLUE="\[\033[34m\]"
@@ -32,6 +30,8 @@ git_prompt () {
 		printf "\033[1;31m"
 	elif [[ "${branch}" = detached* || "${GIT_DIRTY}" == "*" ]]; then
 		printf "\033[1;33m"
+	elif [[ "${branch}" == "develop" ]]; then
+		printf "\033[1;35m"
 	else
 		printf "\033[32m"
 	fi
