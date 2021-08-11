@@ -33,6 +33,7 @@ Plugin 'kana/vim-textobj-line'
 Plugin 'vim-scripts/camelcasemotion'
 Plugin 'tpope/vim-abolish'
 Plugin 'hashivim/vim-terraform'
+Plugin 'cespare/vim-toml'
 "All of Plugins must be added before the following line.
 call vundle#end()
 
