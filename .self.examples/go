@@ -1,7 +1,0 @@
-#!/bin/bash
-
-export PATH="$PATH:/usr/local/go/bin"
-
-export GOPATH="$HOME/Documents/Code/Go"
-export GOBIN="$GOPATH/bin"
-export PATH="$PATH:$GOBIN"
