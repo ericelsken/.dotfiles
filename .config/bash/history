@@ -1,0 +1,16 @@
+#!/bin/bash
+
+mkdir -p "${XDG_STATE_HOME}"
+export HISTFILE="${XDG_STATE_HOME}/bash/bash_history"
+
+export HISTSIZE=1000
+export HISTFILESIZE=5000
+export HISTCONTROL=ignorespace:ignoredups
+
+export HISTIGNORE=""
+export HISTIGNORE="${HISTIGNORE}:cd:cd -"
+export HISTIGNORE="${HISTIGNORE}:ls:ls -la"
+export HISTIGNORE="${HISTIGNORE}:git s:git c:git co:git b:"
+export HISTIGNORE="${HISTIGNORE}:sudo su -"
+export HISTIGNORE="${HISTIGNORE}:exit:clear"
+

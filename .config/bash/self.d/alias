@@ -1,0 +1,4 @@
+#!/bin/bash
+
+alias vpn="openvpn3 session-start --config ${XDG_CONFIG_HOME}/openvpn3/vpn_shipyardapp_io.ovpn"
+
