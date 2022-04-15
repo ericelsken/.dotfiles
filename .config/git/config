@@ -1,0 +1,13 @@
+[user]
+	email = eric.elsken@gmail.com
+	name = Eric Elsken
+[alias]
+	s = status
+	b = branch
+	co = checkout
+[push]
+	default = simple
+[commit]
+	template = /home/ericelsken/.config/git/gitmessage
+[init]
+	defaultBranch = main
