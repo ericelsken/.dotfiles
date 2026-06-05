@@ -66,9 +66,11 @@ if [[ "${user}" == "ericelsken" ]]; then
 fi
 
 hostname="${HOSTNAME}"
-if [[ "${hostname}" == "EricElsken-Shipyard-Laptop" || "${hostname}" == "localhost.localdomain" || ${hostname} == "fedora" ]]; then
-	hostname=here
-fi
+case "${hostname,,}" in
+	*ericelsken*|*eric-elsken*|localhost.localdoamin)
+		hostname=here
+		;;
+esac
 
 userhostname_color="${BLUE}"
 if [[ "${user}" != "me" || "${hostname}" != "here" ]]; then
