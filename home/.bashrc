@@ -2,13 +2,13 @@
 
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+	*i*) ;;
+	*) return ;;
 esac
 
 # User specific environment
 if ! [[ "$PATH" =~ "${HOME}/.local/bin" ]]; then
-    export PATH="${HOME}/.local/bin:${PATH}"
+	export PATH="${HOME}/.local/bin:${PATH}"
 fi
 
 bash_config_dir="${HOME}/.config/bash"
@@ -16,23 +16,23 @@ bashrc_dir="${bash_config_dir}/bashrc.d"
 
 # User specific bashrc.d
 if [[ -d ${bashrc_dir} ]]; then
-        for rc in ${bashrc_dir}/* ; do
-                if [[ -f "$rc" ]]; then
-                        source "$rc"
-                fi
-        done
-        unset rc
+	for rc in ${bashrc_dir}/* ; do
+		if [[ -f "$rc" ]]; then
+			source "$rc"
+		fi
+	done
+	unset rc
 fi
 
 # Host specific bashrc.d
 bashrc_dir_self="${bash_config_dir}/self.d"
 if [[ -d ${bashrc_dir_self} ]]; then
-		for rc in ${bashrc_dir_self}/* ; do
-                if [[ -f "$rc" ]]; then
-                        source "$rc"
-                fi
-        done
-        unset rc
+	for rc in ${bashrc_dir_self}/* ; do
+		if [[ -f "$rc" ]]; then
+			source "$rc"
+		fi
+	done
+	unset rc
 fi
 
 unset bash_config_dir

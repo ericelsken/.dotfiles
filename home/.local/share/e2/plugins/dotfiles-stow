@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+REPO_DIR="${HOME}/.dotfiles"
+
+need() {
+	if ! command -v "$1" >/dev/null 2>&1; then
+		echo >&2 "Missing required command: $1"
+		exit 2
+	fi
+}
+
+need stow
+
+if [ ! -d "${REPO_DIR}" ]; then
+	echo >&2 "Dotfiles repo not found at ${REPO_DIR}. Clone it first (e.g., e2 dotfiles-install)."
+	exit 1
+fi
+
+# Restow home package into $HOME.
+echo "Stowing packages from ${REPO_DIR} ..."
+stow -v -d "${REPO_DIR}" -t "${HOME}" -R home
+
+echo "Done."
