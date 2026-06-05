@@ -1,4 +1,4 @@
-# .dotfilesv2
+# .dotfiles
 Where all my dotfiles live :)
 
 # Stow
@@ -16,8 +16,7 @@ These dotfiles are managed using [GNU Stow](https://www.gnu.org/software/stow/).
 - Then run the quick setup one-liner above.
 
 ## Stow Packages
-- `.config` (alacritty, aws, bash, git, nvim, tmux, ...)
-- `.local` (bin, share/e2, ...)
+- `home`
 
 ## Notes
-- Preferred XDG layout: primary Git config is `~/.config/git/gitconfig`; `~/.gitconfig` includes it.
+- Preferred XDG layout: primary Git config is `~/.config/git/gitconfig`; `./home/.gitconfig` includes it.
