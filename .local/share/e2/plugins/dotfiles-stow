@@ -18,9 +18,12 @@ if [ ! -d "${REPO_DIR}" ]; then
   exit 1
 fi
 
-# Restow core packages into $HOME
-echo "Stowing packages from ${REPO_DIR} to ${HOME}..."
-stow -d "${REPO_DIR}" -t "${HOME}" -R .config .local
+# Restow XDG packages into their matching target directories. Stow strips the
+# package name, so targeting $HOME would link .config contents directly there.
+echo "Stowing packages from ${REPO_DIR}..."
+mkdir -p "${HOME}/.config" "${HOME}/.local"
+stow -v -d "${REPO_DIR}" -t "${HOME}/.config" -R .config
+stow -v -d "${REPO_DIR}" -t "${HOME}/.local" -R .local
 
 # Link top-level files not covered by stow packages
 for f in .bashrc .bash_profile .gitconfig; do
@@ -31,4 +34,3 @@ for f in .bashrc .bash_profile .gitconfig; do
 done
 
 echo "Done."
-

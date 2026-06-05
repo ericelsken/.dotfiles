@@ -38,3 +38,4 @@ fi
 unset bash_config_dir
 unset bashrc_dir
 unset bashrc_dir_self
+. "$HOME/.cargo/env"

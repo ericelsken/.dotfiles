@@ -7,7 +7,7 @@ These dotfiles are managed using [GNU Stow](https://www.gnu.org/software/stow/).
 ## Quick setup (one-liner)
 - After cloning this repo to `~/.dotfiles`, run:
   - `sh ~/.dotfiles/.local/share/e2/plugins/dotfiles-stow`
-  - This stows `.config` and `.local` into `$HOME` and links top-level files: `.bashrc`, `.bash_profile`, `.gitconfig`.
+  - This stows `.config` into `$HOME/.config`, `.local` into `$HOME/.local`, and links top-level files: `.bashrc`, `.bash_profile`, `.gitconfig`.
 
 ## Installation / Bootstrapping
 - Clone the repo (manually or via the e2 installer):

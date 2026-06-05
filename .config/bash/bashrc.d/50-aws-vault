@@ -1,0 +1,3 @@
+#!/bin/bash
+
+eval "$(aws-vault --completion-script-bash)"
