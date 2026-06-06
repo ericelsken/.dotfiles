@@ -1,0 +1,23 @@
+#!/bin/bash
+
+E2_PLUGINS_DIR="${HOME}/.local/share/e2/plugins"
+
+_e2_completions() {
+	local cur prev words cword
+	_init_completion -n : || return
+
+	if [[ "${prev}" == "e2" && "${cword}" -eq 1 ]]; then
+		
+		local plugins=()
+		while IFS='' read -r -d '' p; do
+			plugins+=( "$(basename "${p}")" )
+		done < <(find "${E2_PLUGINS_DIR}" -maxdepth 1 ! -type d -perm -u+x -print0 2>/dev/null)
+
+		COMPREPLY=( $(compgen -W "${plugins[*]}" -- "${cur}") )
+		return 0
+	fi
+
+	return 0
+}
+
+complete -F _e2_completions e2
