@@ -23,7 +23,7 @@ if [[ -x "${plugin_file}" ]]; then
 fi
 
 if [[ -f "${plugin_file}" ]]; then
-	echo >&2 "Found a plugin file that is not executable."
+	echo >&2 "Found a plugin file that is not executable. Quitting."
 	exit 3
 fi
 

@@ -3,36 +3,37 @@
 # Try to make this script shell agnostic, though the rest of the repo scripts
 # may not be.
 
-REPO_URL="https://github.com/ericelsken/.dotfilesv2"
+REPO_URL="https://github.com/ericelsken/.dotfiles"
+REPO_DIR="${HOME}/.dotfiles"
 
-if ! which git > /dev/null; then
+if [ -z "${HOME}" ]; then
+	echo >&2 "HOME is not set. Quitting."
+	exit 2
+fi
+
+if ! command -v git > /dev/null; then
 	echo >&2 "Cannot find git. Install then re-run this script."
 	exit 1
 fi
 
-dest="${HOME}/.dotfiles"
-
-if [ -d "${dest}/.git" ]; then
-	echo >&2 "Installation destination ${dest} is already a git repository. Not doing anything. Bye."
+if [ -d "${REPO_DIR}/.git" ]; then
+	echo >&2 "Installation destination ${REPO_DIR} is already a git repository. Not doing anything. Bye."
 	exit 0
 fi
 
-if [ -e "${dest}" ] && [ ! -d "${dest}/.git" ]; then
-	echo >&2 "Installation destination ${dest} exists but is not a git repository."
+if [ -e "${REPO_DIR}" ] && [ ! -d "${REPO_DIR}/.git" ]; then
+	echo >&2 "Installation destination ${REPO_DIR} exists but is not a git repository."
 	exit 1
 fi
 
-# if [ -d "${dest}/.git" ]; then
-# fi
-
-git clone "${REPO_URL}" "${dest}"
+git clone "${REPO_URL}" "${REPO_DIR}"
 
 # Optional: After you reacquaint yourself with the repo, you can
 # uncomment the following lines to immediately stow everything into $HOME.
 # This uses the stow plugin directly (no dependency on e2 being stowed yet).
 #
 # if command -v stow >/dev/null 2>&1; then
-# 	sh "${dest}/.local/share/e2/plugins/dotfiles-stow"
+# 	sh "${REPO_DIR}/.local/share/e2/plugins/dotfiles-stow"
 # else
-# 	echo >&2 "stow not found; install it, then run: sh ${dest}/.local/share/e2/plugins/dotfiles-stow"
+# 	echo >&2 "stow not found; install it, then run: sh ${REPO_DIR}/.local/share/e2/plugins/dotfiles-stow"
 # fi
