@@ -123,7 +123,7 @@ _e2_update_prompt() {
 		PS1+="\[${YELLOW}\] [AWS ${aws_text}]"
 	fi
 
-	if [[ "${SHLVL}" -gt 1 ]]; then
+	if (( SHLVL > 1 )) && ! [[ -n "${TMUX-}" && "${SHLVL}" -le 2 ]] ; then
 		PS1+="\[${YELLOW229}\] ${TERMINAL_GLYPH} ${SHLVL}"
 	fi
 
