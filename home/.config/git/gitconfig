@@ -1,25 +1,37 @@
+; All paths should assume stow-ed path at ~/.config/git/
+
 [alias]
+	aa = add --all
 	a = add
 	b = branch
+	ca = commit -a
 	c = commit
 	co = checkout
 	d = diff
 	du = diff --name-only --diff-filter=U
 	l1 = log -n 1
 	m = merge
-	pl = pull
 	ph = push
+	pl = pull
 	rb = rebase
-	s = status
 	si = switch
+	sm = submodule
+	s = status
+
 [user]
 	email = 5034872+ericelsken@users.noreply.github.com
 	name = Eric Elsken
+
 [init]
 	defaultBranch = main
+
 [commit]
-	template = /home/ericelsken/.config/git/gitmessage
+	template = ~/.config/git/gitmessage
 
 [push]
 	autoSetupRemote = true
 	default = simple
+
+; Include machine local config if present.
+[include]
+	path = ~/.config/git/self.d/gitconfig

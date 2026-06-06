@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -euo pipefail
+
+if [[ "${#}" -lt 1 ]]; then
+	echo >&2 "Usage: ${0} <THING_TO_INSTALL>"
+	exit 1
+fi
+
+thing="${1}"
+shift
+
+install_file="${HOME}/.local/share/e2/tools/${thing}/e2-install" # stow-ed path.
+if [[ ! -f "${install_file}" ]]; then
+	{ printf '%s\n' \
+		"<THING_TO_INSTALL>: ${thing} does not have an install file. Quitting." \
+		"Install file would be '${install_file}'"
+	} >&2
+	exit 2
+fi
+
+source "${install_file}" "${@}"
