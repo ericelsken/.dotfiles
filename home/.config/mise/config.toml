@@ -1,0 +1,19 @@
+[tools]
+go = "latest"
+node = "lts"
+terraform = "latest"
+jq = "latest"
+aws = { version = "latest", symlink_bins = "true" }
+aws-vault = "latest"
+"aqua:opencode" = "latest"
+neovim = "latest"
+tree-sitter = "latest"
+usage = "latest"
+
+[settings]
+
+[settings.node]
+corepack = true
+
+[settings.npm]
+package_manager = "pnpm"

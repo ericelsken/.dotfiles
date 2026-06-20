@@ -1,0 +1,11 @@
+#!/bin/bash
+
+MISE_PATH="${HOME}/.local/bin/mise"
+
+if [[ -f "${MISE_PATH}" ]]; then
+	eval "$("${MISE_PATH}" activate bash)"
+fi
+
+unset MISE_PATH
+
+eval "$(mise completion bash --include-bash-completion-lib)"

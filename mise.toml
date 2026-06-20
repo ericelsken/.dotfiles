@@ -1,0 +1,11 @@
+[tools]
+node = "lts"
+"npm:prettier" = "latest"
+
+[settings]
+
+[settings.node]
+corepack = true
+
+[settings.npm]
+package_manager = "pnpm"
